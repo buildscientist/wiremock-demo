@@ -64,8 +64,8 @@ public class TempConvertTest {
 	public void mockFarenheightToCelcius() throws IOException, SAXException, XpathException {
 		String conversionEndpointURI = "/tempconvert.asmx?op=FahrenheitToCelsius";		
 		String requestXPathQuery = "//soap12:Envelope | //soap12:Body | //FahrenheitToCelsius | //Fahrenheit";
-		String responseEnvelope = IOUtils.toString(getClass().getResourceAsStream("/farenheighttocelcius/sampleresponse.xml"),"UTF-8");
-		String requestEnvelope = IOUtils.toString(getClass().getResourceAsStream("/farenheighttocelcius/samplerequest.xml"),"UTF-8");
+		String responseEnvelope = IOUtils.toString(getClass().getResourceAsStream("/farenheittocelsius/sampleresponse.xml"),"UTF-8");
+		String requestEnvelope = IOUtils.toString(getClass().getResourceAsStream("/farenheittocelsius/samplerequest.xml"),"UTF-8");
 				
 		/**
 		 * Mock SOAP endpoint for a SOAP web service that matches a response body with the following SOAP envelope:
@@ -91,11 +91,11 @@ public class TempConvertTest {
 	}
 	
 	@Test
-	public void mockCelciusToFarenheight() throws IOException {
-		String conversionEndpointURI = "/tempconvert.asmx?op=CelsiusToFarenheight";	
+	public void mockCelciusToFarenheit() throws IOException {
+		String conversionEndpointURI = "/tempconvert.asmx?op=CelsiusToFarenheit";	
 		String requestXPathQuery = "//soapenv:Envelope | //soapenv:Body | //CelsiusToFahrenheit | //CelsiusToFahrenheit";
-		String responseEnvelope = IOUtils.toString(getClass().getResourceAsStream("/celsiustofarenheight/sampleresponse.xml"),"UTF-8");
-		String requestEnvelope = IOUtils.toString(getClass().getResourceAsStream("/celsiustofarenheight/samplerequest.xml"),"UTF-8");
+		String responseEnvelope = IOUtils.toString(getClass().getResourceAsStream("/celsiustofarenheit/sampleresponse.xml"),"UTF-8");
+		String requestEnvelope = IOUtils.toString(getClass().getResourceAsStream("/celsiustofarenheit/samplerequest.xml"),"UTF-8");
 		
 		/**
 		 * Mock SOAP endpoint for a SOAP web service that matches a response body with the following SOAP envelope:
